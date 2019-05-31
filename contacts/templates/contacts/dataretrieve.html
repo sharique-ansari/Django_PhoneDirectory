@@ -1,0 +1,25 @@
+{% load static %}
+
+<a href="{% url 'contacts:upload' %}" class="top-menu">upload new</a>
+<br/>
+<br/>
+<br/>
+
+{% block content %}
+  <form method="post" >
+    {% csrf_token %}
+{#      <label for="your_name">Your name: </label>#}
+      <label>
+          Your name
+          <input type="text" name="username">
+      </label>
+      <br/>
+      <label>
+          Friend name
+          <input type="text" name="friendname">
+      </label>
+      <br/>
+    <button type="submit">Upload</button>
+  </form>
+
+{% endblock %}

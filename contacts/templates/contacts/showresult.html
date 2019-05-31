@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<a href="{% url 'contacts:retrieve' %}" class="top-menu">retrieve other contacts</a>
+<br/>
+<a href="{% url 'contacts:upload' %}" class="top-menu">upload new</a>
+<br/><br/><br/>
+
+<h1>{{ username }}</h1>
+<ul>
+<h2>
+    friend name :
+    {{ friendname }}
+</h2>
+{% for number in listl %}
+    <li>{{ number }}</li>
+{% endfor %}
+</ul>

@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<h1>{{ user.user_name }}</h1>
+<ul>
+{% for friend in user.contact_set.all %}
+    <li>{{ friend.friend_name }}{{ friend.phone_number }}</li>
+{% endfor %}
+</ul>

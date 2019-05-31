@@ -1,0 +1,23 @@
+
+{% load static %}
+
+<a href="{% url 'contacts:retrieve' %}" class="top-menu">retrieve contacts</a>
+<br/>
+<br/>
+<br/>
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+{#      <label for="your_name">Your name: </label>#}
+      <label>
+          Your name
+          <input type="text" name="username">
+      </label>
+      <br/>
+      <input type="file" name="myfile">
+      <br/>
+    <button type="submit">Upload</button>
+  </form>
+
+{% endblock %}
